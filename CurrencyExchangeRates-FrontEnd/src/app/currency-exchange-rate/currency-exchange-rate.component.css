@@ -1,0 +1,41 @@
+.selector, .label {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.selector {
+  background-color: rgb(255, 220, 177);
+  padding: 5px 5px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  opacity: 0.8;
+  box-shadow: 1px 0px 5px 0px grey;
+}
+
+.label {
+  font-size: large;
+  font-weight: 600;
+}
+
+table, th, td{
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: auto;
+}
+
+table {
+  width: 60%;
+  text-align: center;
+}
+
+.selected-currency_column {
+  width: 200px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+

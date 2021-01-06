@@ -1,0 +1,24 @@
+<form #form="ngForm">
+  <label for="currency" class="label">Select Currency:</label>
+  <select name="selectedCurrency" #curr class="selector" [(ngModel)]="selectedCurrency" (ngModelChange)="this.onCurrencyChange()">
+    <option *ngFor="let currency of this.availableCurrencies" [ngValue]="currency.abbrevation">
+      {{currency.title}} ({{currency.abbrevation}})
+    </option>
+  </select>
+</form>
+<div>
+  <span class="label" [style.margin-top]="'50px'">Last Updated Date: {{this.currencyExchangeRates.date}}</span>
+</div>
+<table>
+  <tr>
+    <th class="selected-currency_column">Selected Currency</th>
+    <th colspan="3">Exchange Rate With</th>
+  </tr>
+  <tr>
+    <td rowspan="2" class="selected-currency_column" [style.background-color]="'aliceblue'">{{selectedCurrency}}</td>
+    <td *ngFor="let currency of otherAvailableCurrencies">{{currency}}</td>
+  </tr>
+  <tr>
+    <td *ngFor="let currency of otherAvailableCurrencies">{{currencyExchangeRates.rates[currency]}}</td>
+  </tr>
+</table>
