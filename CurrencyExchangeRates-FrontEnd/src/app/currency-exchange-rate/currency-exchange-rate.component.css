@@ -17,7 +17,8 @@
 
 .label {
   font-size: large;
-  font-weight: 600;
+  font-weight: 500;
+  color: black;
 }
 
 table, th, td{
